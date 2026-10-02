@@ -1,0 +1,710 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #ffffff;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    border-bottom: 1px solid rgba(212,175,55,0.25);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #d4af37;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    min-height: calc(100vh - 85px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.small-title {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    max-width: 1000px;
+}
+
+.hero h1 span {
+    color: #d4af37;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 25px auto;
+    color: #cccccc;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gold-button,
+.outline-button {
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.gold-button {
+    background: #d4af37;
+    color: #080808;
+}
+
+.gold-button:hover {
+    background: #f0d060;
+    transform: translateY(-3px);
+}
+
+.outline-button {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+}
+
+.outline-button:hover {
+    background: #d4af37;
+    color: #080808;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 100px 8%;
+    text-align: center;
+    background: #0c0c0c;
+}
+
+.services h2 {
+    font-size: 42px;
+    margin-bottom: 55px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-card {
+    padding: 40px 30px;
+    background: #111111;
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+}
+
+.service-card h3 {
+    color: #d4af37;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaaaaa;
+    line-height: 1.7;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services h2 {
+        font-size: 32px;
+    }
+}
+/* ================= BEFORE / AFTER ================= */
+
+.before-after-image {
+    max-width: 850px;
+    margin: 40px auto 0;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.before-after-image img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.before-after-image {
+    margin: 15px auto 0;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.comparison-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.comparison-card {
+    background: #111111;
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.comparison-image {
+    height: 330px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.before-image {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)),
+        url("https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1200&q=80");
+}
+
+.after-image {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)),
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80");
+}
+
+.comparison-image span {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #d4af37;
+    color: #080808;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.comparison-card h3 {
+    color: #d4af37;
+    font-size: 23px;
+    padding: 25px 25px 5px;
+}
+
+.comparison-card p {
+    color: #999999;
+    padding: 0 25px 25px;
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+
+@media (max-width: 768px) {
+
+    .before-after-image {
+        max-width: 95%;
+    }
+
+    .before-after-image img {
+        max-height: 350px;
+    }
+
+}
+/* ================= WHY US ================= */
+
+.why-us {
+    padding: 100px 8%;
+    background: #0c0c0c;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 44px;
+    margin-bottom: 55px;
+}
+
+.benefits-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.benefit-card {
+    background: #111111;
+    padding: 35px 25px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+}
+
+.benefit-number {
+    color: #d4af37;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    color: #999999;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us h2 {
+        font-size: 34px;
+    }
+
+}
+/* ================= GALLERY ================= */
+
+.gallery {
+    padding: 110px 8%;
+    background: #080808;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.gallery-container {
+    max-width: 1150px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 330px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .gallery {
+        padding: 80px 5%;
+    }
+
+    .gallery h2 {
+        font-size: 34px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 260px;
+    }
+
+}
+/* ================= PRICING ================= */
+
+.pricing {
+    padding: 110px 8%;
+    background: #0c0c0c;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.pricing-container {
+    max-width: 1100px;
+    margin: 55px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.price-card {
+    position: relative;
+    background: #111111;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 18px;
+    padding: 40px 30px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-7px);
+    border-color: #d4af37;
+}
+
+.price-card h3 {
+    color: #d4af37;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.price span {
+    color: #888888;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.price-card p {
+    color: #999999;
+    line-height: 1.6;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.price-card li {
+    color: #cccccc;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.price-card li::before {
+    content: "✓";
+    color: #d4af37;
+    margin-right: 10px;
+}
+
+.price-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 13px;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.price-button:hover,
+.price-button.gold {
+    background: #d4af37;
+    color: #080808;
+}
+
+.featured {
+    border-color: #d4af37;
+}
+
+.popular {
+    position: absolute;
+    top: -13px;
+    right: 25px;
+    background: #d4af37;
+    color: #080808;
+    padding: 6px 13px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-section {
+    padding: 110px 8%;
+    background:
+        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.9)),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.whatsapp-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.whatsapp-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.whatsapp-content p:not(.small-title) {
+    color: #bbbbbb;
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background: #d4af37;
+    color: #080808;
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-4px);
+    background: #f0d060;
+}
+
+
+/* ================= PRICING MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .pricing {
+        padding: 80px 5%;
+    }
+
+    .pricing h2 {
+        font-size: 34px;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp-section {
+        padding: 80px 5%;
+    }
+
+    .whatsapp-content h2 {
+        font-size: 36px;
+    }
+
+}
+/* ================= CONTACT ================= */
+
+.contact {
+    padding: 110px 8%;
+    background: #0c0c0c;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 45px auto 0;
+    display: grid;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 18px;
+    background: #111111;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #d4af37;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #d4af37;
+    color: #080808;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #f0d060;
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 80px 5%;
+    }
+
+    .contact h2 {
+        font-size: 34px;
+    }
+
+}
